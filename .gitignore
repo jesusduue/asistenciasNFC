@@ -6,5 +6,6 @@
 # Dependencias y artefactos locales
 node_modules/
 dist/
+public/config.js
 .DS_Store
 npm-debug.log*

@@ -1,5 +1,5 @@
 /* Cliente único de Supabase. Solo usa la URL y anon key públicas del proyecto. */
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { createClient } from '@supabase/supabase-js';
 
 const configuración = globalThis.__SUPABASE_CONFIG__ || {};
 const url = configuración.url || '';
