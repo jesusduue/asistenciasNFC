@@ -31,4 +31,4 @@ http.createServer((solicitud, respuesta) => {
   if (ruta === '/health') { respuesta.writeHead(200, { 'Content-Type': 'application/json' }); respuesta.end('{"ok":true}'); return; }
   if (ruta === '/manus-routes.json') { servir('/public/manus-routes.json', respuesta); return; }
   if (!servir(ruta, respuesta)) servir('/index.html', respuesta);
-}).listen(puerto, '0.0.0.0', () => console.log(`Asistencia UPTNTS escuchando en http://0.0.0.0:${puerto}`));
+}).listen(puerto, '0.0.0.0', () => console.log(`Asistencia UPTNTS escuchando en http://127.0.0.1:${puerto}`));
