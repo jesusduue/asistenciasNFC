@@ -1,0 +1,5 @@
+/* Guardas de navegación: autenticación y permiso de negocio por rol. */
+import { tienePermiso, etiquetaRol } from '../lib/permisos.js';
+import { escaparHTML } from '../lib/format.js';
+export function rutaSinPermiso() { return `<section class="mx-auto flex min-h-[60vh] max-w-xl items-center justify-center p-6"><div class="w-full rounded-3xl border border-border bg-white p-8 text-center shadow-soft"><div class="mx-auto mb-5 grid h-16 w-16 place-items-center rounded-2xl bg-sand text-clay"><i data-lucide="shield-alert"></i></div><h1 class="text-2xl font-semibold">Sin permiso</h1><p class="mt-2 text-sm text-ink/65">Tu rol (${escaparHTML(etiquetaRol(window.app?.auth?.perfil?.rol?.nom_rol || ''))}) no tiene acceso a esta sección.</p><button data-navegar="/" class="mt-6 rounded-2xl bg-clay px-5 py-3 text-sm font-semibold text-white transition hover:bg-ink">Volver al resumen</button></div></section>`; }
+export function puedeEntrar(perfil, permiso) { return Boolean(perfil?.rol?.nom_rol && tienePermiso(perfil.rol.nom_rol, permiso)); }

@@ -1,0 +1,9 @@
+# Variables y configuración local
+.env
+.env.*
+!.env.example
+
+# Dependencias y artefactos locales
+node_modules/
+.DS_Store
+npm-debug.log*

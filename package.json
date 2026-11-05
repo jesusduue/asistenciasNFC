@@ -1,0 +1,15 @@
+{
+  "name": "asistencia-uptnts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "tailwindcss -c tailwind.config.cjs -i ./src/styles/app.css -o ./src/styles/generated.css --minify && node scripts/build-config.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

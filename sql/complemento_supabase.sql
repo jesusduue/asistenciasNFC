@@ -1,0 +1,14 @@
+-- Complemento opcional de Asistencia UPTNTS
+--
+-- El esquema principal, fn_marcar_asistencia y v_asistencia_hoy ya existen en el
+-- proyecto Supabase del cliente. El SQL fuente mencionado en el brief no venía
+-- incluido en el material adjunto, por eso este archivo NO recrea ni modifica
+-- tablas existentes y evita una ejecución destructiva accidental.
+--
+-- Antes de ejecutar cualquier complemento real, revisar y adaptar las políticas
+-- RLS al esquema y a la función de autorización del proyecto. Nunca expongas una
+-- service_role key en el navegador.
+--
+-- Para vincular una cuenta creada en Supabase Auth, hacerlo desde un entorno
+-- administrativo seguro siguiendo la documentación del README, asignando
+-- usuario.auth_uid = auth.users.id y manteniendo est_usu = 'a'.

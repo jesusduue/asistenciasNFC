@@ -1,0 +1,32 @@
+/* Fuente de estilos: Tailwind se compila en build, nunca se ejecuta con eval en el navegador. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos de interacción y piezas que complementan las clases de Tailwind. */
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid rgba(167, 141, 120, .5); outline-offset: 2px; }
+::selection { background: #A78D78; color: #291C0E; }
+.app-grid { display: grid; grid-template-columns: 260px minmax(0, 1fr); min-height: 100vh; }
+@media (max-width: 767px) { .app-grid { display: block; } .desktop-sidebar { display: none; } }
+.kpi-card { position: relative; overflow: hidden; }
+.kpi-card::after { content: ''; position: absolute; right: -18px; top: -24px; width: 92px; height: 92px; border: 18px solid rgba(167,141,120,.14); border-radius: 999px; }
+.table-scroll { overflow-x: auto; }
+@media (max-width: 767px) {
+  .responsive-table thead { display: none; }
+  .responsive-table, .responsive-table tbody, .responsive-table tr, .responsive-table td { display: block; width: 100%; }
+  .responsive-table tr { margin-bottom: .75rem; border: 1px solid #BEB5A9; border-radius: 1rem; background: #fff; padding: .75rem; }
+  .responsive-table td { border: 0; display: flex; justify-content: space-between; gap: 1rem; padding: .45rem 0; text-align: right; }
+  .responsive-table td::before { color: #6E473B; content: attr(data-label); font-weight: 600; text-align: left; }
+}
+.skeleton { animation: pulse 1.5s ease-in-out infinite; background: linear-gradient(90deg, #E1D4C2 25%, #F4E6D2 50%, #E1D4C2 75%); background-size: 200% 100%; }
+@keyframes pulse { 0%, 100% { opacity: .65; background-position: 0 0; } 50% { opacity: 1; background-position: -100% 0; } }
+.fade-in { animation: fadeIn .22s ease-out both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+.bottom-nav { padding-bottom: max(.5rem, env(safe-area-inset-bottom)); }
+.bar-fill { transition: height .45s ease; }
+.overlay { background: rgba(41, 28, 14, .45); backdrop-filter: blur(3px); }

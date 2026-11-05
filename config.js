@@ -1,0 +1,1 @@
+window.__SUPABASE_CONFIG__ = {"url":"https://gzeihguufyuzlenfcsfm.supabase.co","anonKey":"sb_publishable_8lV7JD5_CLiNkfQcg6wMUA_tm9zCNdG"};
